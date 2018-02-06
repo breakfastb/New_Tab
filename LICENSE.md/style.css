@@ -1,0 +1,109 @@
+@font-face {
+    src: url('KFhimaji.otf');
+    font-family: 'KFhimaji';
+}
+
+@font-face {
+    src: url('m1.ttf');
+    font-family: 'Handwriting';
+}
+
+#load {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0 auto;
+    background: #fff;
+    z-index: 50000;
+}
+
+body,
+html {
+    user-select: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mascot {
+    max-height:500px;
+    max-width:500px;
+    /*display:none;*/
+}
+
+.clock {
+    position:absolute;
+    top:1em;
+    right:1em;
+    /*-moz-text-fill-color: white;
+    -webkit-text-fill-color: white;
+    -moz-text-stroke-color: #f05c9b;
+    -webkit-text-stroke-color: #f05c9b;
+    -moz-text-stroke-width: 3px;  
+    -webkit-text-stroke-width: 3px;*/
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin: 0;
+    color: #fff;
+    font-family: 'KFhimaji';
+}
+
+.slogan {
+
+
+    position:absolute;
+    bottom:1.1em;
+    left:1.4em;
+    font-size: 8em;
+    font-family: 'Handwriting';
+    letter-spacing: 0.5px;
+}
+
+#search {
+    position:absolute;
+    bottom:8em;
+    left:13em;
+}
+
+#search form {
+    text-align: center;
+}
+
+#search input {
+    height: 15px;
+    padding: 15px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-size: 0.9em;
+}
+
+#search input:focus {
+    outline: 0;
+    color: #606060;
+}

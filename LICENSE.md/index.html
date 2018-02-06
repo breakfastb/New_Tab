@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NorthMelon</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    </head>
+    <body>
+        <div id="load"></div>
+        <div id="container">
+            <p class="clock"></p>
+            
+            <div id="header">
+                <img class="mascot" src="">
+                <p class="slogan"></p>
+            </div>
+            
+            <div id="search">
+    			<form class="searchForm" method="get" action="https://google.com/search">
+    				<input class="searchBar search_google" autocomplete="off" type="text" name="q" placeholder="please search me, senpai~" autofocus="autofocus" search_/>
+    			</form>
+    		</div>
+    	</div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            //d-dont touch, baka
+            function bgSet(bg) {
+                if (bg.substring(0,4) == 'http' || bg.substring(0,4) == 'file') {
+                    bg = "url('" + bg + "')"; 
+                }
+                else {
+                    bg = bg;
+                }
+                $('body').css('background',bg);
+            }
+            
+            function textSet(text,color) {
+                $('.slogan').text(text);
+                $('p').css('color',color);
+            }
+            
+            $(document).ready(function() {
+                $('#load').fadeOut();
+               //get current time
+                var d = new Date();
+                var time = d.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'});
+                $('.clock').text(time.replace(/\s/g, ''));
+                
+                //set slogan 
+                textSet('Just Yuri','#fff');
+                
+                //set bg
+                //bgSet('#fbbbdd');
+                bgSet('https://i.imgur.com/gDtzMBE.png');
+            });
+        </script>
+    </body>
+</html>
