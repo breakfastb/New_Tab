@@ -4,7 +4,7 @@
 }
 
 @font-face {
-    src: url('./m1.TTF');
+    src: url('m1.TTF');
     font-family: 'Handwriting';
 }
 
@@ -30,8 +30,8 @@ html {
 }
 
 body {
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
 }
 
 #container {
